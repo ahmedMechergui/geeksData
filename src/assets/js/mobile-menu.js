@@ -1,9 +1,3 @@
-/**
- * Template Name: SoftLand - v2.1.0
- * Template URL: https://bootstrapmade.com/softland-bootstrap-app-landing-page-template/
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
 (function($) {
   "use strict";
 
@@ -95,5 +89,25 @@
     })
   };
   siteScroll();
+
+
+  // Testimonials carousel (uses the Owl Carousel library)
+  $(".testimonials-carousel").owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 1
+      },
+      900: {
+        items: 2
+      }
+    }
+  });
+
 
 })(jQuery);
