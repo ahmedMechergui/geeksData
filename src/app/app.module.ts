@@ -8,10 +8,14 @@ import {HomeModule} from './home-module/home.module';
 import {SoftwareModule} from './software-module/software.module';
 import {AppRoutingModule} from './app-routing.module';
 import {SharedComponentsModule} from './shared/shared-components-module/shared-components.module';
+import {ToastrModule} from 'ngx-toastr';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +24,9 @@ import {SharedComponentsModule} from './shared/shared-components-module/shared-c
     SharedComponentsModule,
     LoginModule,
     HomeModule,
-    SoftwareModule
+    SoftwareModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

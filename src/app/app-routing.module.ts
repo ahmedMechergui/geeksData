@@ -2,8 +2,8 @@ import {NgModule} from '@angular/core';
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
-  {path: 'login', loadChildren: './login-module/login.module#LoginModule', pathMatch: 'full'},
-  {path: '', loadChildren: './home-module/home.module.ts#HomeModule'},
+  {path: 'login', loadChildren: './login-module/login.module#LoginModule'},
+  {path: '', loadChildren: './home-module/home.module#HomeModule' , pathMatch : 'full'},
   {path: 'software', loadChildren: './software-module/software.module#SoftwareModule'},
   // {path: 'news', loadChildren: './modules/events/events.module#EventsModule' , canActivate : [AuthGuard]},
   {path: '**', redirectTo: ''}
