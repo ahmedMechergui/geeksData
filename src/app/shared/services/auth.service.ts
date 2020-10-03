@@ -6,12 +6,11 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class AuthService {
 
-  constructor(private AFAuth: AngularFireAuth) { }
+  constructor(
+    private AFAuth: AngularFireAuth) { }
 
   Login(credentials): any{
     return this.AFAuth.signInWithEmailAndPassword(credentials.email, credentials.password);
-    // this.AFAuth.currentUser.then(user => console.log(user));
-    // this.AFAuth.signOut();
   }
 
   isLogged(): any{

@@ -40,8 +40,6 @@ export class LoginPageComponent implements OnInit {
       this.isLoading = false;
       this.router.navigate(['/home']);
     });
-    // this.authService.Login(this.form);
-  // this.authGuard.canActivate().then(user => console.log(user));
   }
 
 }
