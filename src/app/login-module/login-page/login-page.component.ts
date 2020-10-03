@@ -17,8 +17,7 @@ export class LoginPageComponent implements OnInit {
   constructor(
     private toaster: ToastService,
     private authService: AuthService,
-    private router: Router,
-    private authGuard: AuthGuard
+    private router: Router
     ) {
   }
 

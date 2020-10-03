@@ -4,7 +4,7 @@ import {AuthGuard} from './shared/services/auth-guard.guard';
 
 const routes: Routes = [
   {path: 'login', loadChildren: './login-module/login.module#LoginModule'},
-  {path: '', loadChildren: './home-module/home.module#HomeModule' , pathMatch : 'full'},
+  {path: '', loadChildren: './home-module/home.module#HomeModule' , pathMatch : 'full', canActivate: [AuthGuard]},
   {path: 'logiciel', loadChildren: './software-module/software.module#SoftwareModule', canActivate: [AuthGuard]},
   // {path: 'news', loadChildren: './modules/events/events.module#EventsModule' , canActivate : [AuthGuard]},
   {path: '**', redirectTo: ''}

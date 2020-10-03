@@ -24,6 +24,7 @@
           <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
             <li [routerLinkActive]="'active'"><a [routerLink]="'/'" class="nav-link">Acceuil</a></li>
             <li [routerLinkActive]="'active'"><a [routerLink]="'/logiciel'" class="nav-link">Logiciel</a></li>
+            <li ><a (click)="logout()" class="nav-link cursor-pointer">Logout</a></li>
           </ul>
         </nav>
       </div>

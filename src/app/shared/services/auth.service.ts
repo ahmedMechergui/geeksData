@@ -13,6 +13,10 @@ export class AuthService {
     return this.AFAuth.signInWithEmailAndPassword(credentials.email, credentials.password);
   }
 
+  Logout(): any{
+    this.AFAuth.signOut();
+  }
+
   isLogged(): any{
     return this.AFAuth.authState;
   }
