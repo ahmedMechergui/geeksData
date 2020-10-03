@@ -14,4 +14,8 @@ export class AuthService {
     // this.AFAuth.signOut();
   }
 
+  isLogged(): any{
+    return this.AFAuth.authState;
+  }
+
 }
