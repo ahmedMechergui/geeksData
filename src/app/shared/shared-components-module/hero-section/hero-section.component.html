@@ -21,8 +21,8 @@
             <p class="mb-5" data-aos="fade-right" data-aos-delay="100">Réduire les risques, détecter les fraudes et contrôler la cybersécurité en temps réel</p>
           </div>
           <div class="col-lg-5 iphone-wrap">
-            <img src="assets/images/robot 2.png" alt="Image" class="phone-1 robot-img" data-aos="fade-right">
-<!--            <img src="assets/images/phone_2.png" alt="Image" class="phone-2" data-aos="fade-right" data-aos-delay="200">-->
+            <img src="{{image1}}" alt="Image" class="phone-1"  data-aos="fade-right">
+            <img *ngIf="image2" src="{{image2 ? image2 : ''}}" alt="Image" class="phone-2" data-aos="fade-right" data-aos-delay="200">
           </div>
         </div>
       </div>

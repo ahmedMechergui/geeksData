@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class AuthService {
     this.AFAuth.signOut();
   }
 
-  isLogged(): any{
+  isLogged(): Observable<any>{
     return this.AFAuth.authState;
   }
 

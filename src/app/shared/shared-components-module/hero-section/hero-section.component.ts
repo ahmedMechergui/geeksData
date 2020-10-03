@@ -7,6 +7,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class HeroSectionComponent implements OnInit {
 @Input() imageName;
+@Input() image1 ;
+@Input() image2 = null;
   constructor() { }
 
   ngOnInit(): void {
