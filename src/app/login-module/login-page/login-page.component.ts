@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ToastService} from '../../shared/services/toast.service';
+import {AuthService} from '../../shared/services/auth.service';
+import {Router} from '@angular/router';
+import {AuthGuard} from "../../shared/services/auth-guard.guard";
 
 @Component({
   selector: 'app-login-page',
@@ -9,9 +12,14 @@ import {ToastService} from '../../shared/services/toast.service';
 })
 export class LoginPageComponent implements OnInit {
   form: FormGroup;
-  isLoading = true;
+  isLoading = false;
 
-  constructor(private toaster: ToastService) {
+  constructor(
+    private toaster: ToastService,
+    private authService: AuthService,
+    private router: Router,
+    private authGuard: AuthGuard
+    ) {
   }
 
   ngOnInit(): void {
@@ -24,6 +32,16 @@ export class LoginPageComponent implements OnInit {
       email: new FormControl('ahmed.michrgui@hotmail.fr', [Validators.required, Validators.email]),
       password: new FormControl('9ar9ouch', [Validators.required])
     });
+  }
+
+  submit(): void{
+    this.isLoading = true;
+    this.authService.Login(this.form.value).then(() => {
+      this.isLoading = false;
+      this.router.navigate(['/home']);
+    });
+    // this.authService.Login(this.form);
+  // this.authGuard.canActivate().then(user => console.log(user));
   }
 
 }

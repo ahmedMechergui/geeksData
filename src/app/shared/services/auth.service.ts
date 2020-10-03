@@ -10,6 +10,8 @@ export class AuthService {
 
   Login(credentials): any{
     return this.AFAuth.signInWithEmailAndPassword(credentials.email, credentials.password);
+    // this.AFAuth.currentUser.then(user => console.log(user));
+    // this.AFAuth.signOut();
   }
 
 }
