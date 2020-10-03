@@ -1,5 +1,5 @@
 <!-- ======= Mobile Menu ======= -->
-<div class="site-mobile-menu site-navbar-target">
+<div class="site-mobile-menu site-navbar-target" *ngIf="isAuthenticated">
   <div class="site-mobile-menu-header">
     <div class="site-mobile-menu-close mt-3">
       <span class="icofont-close js-menu-toggle"></span>
@@ -9,7 +9,7 @@
 </div>
 
 <!-- ======= Header ======= -->
-<header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+<header class="site-navbar js-sticky-header site-navbar-target" role="banner" *ngIf="isAuthenticated">
 
   <div class="container">
     <div class="row align-items-center">
