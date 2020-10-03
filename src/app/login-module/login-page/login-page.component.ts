@@ -31,6 +31,7 @@ export class LoginPageComponent implements OnInit {
       email: new FormControl('ahmed.michrgui@hotmail.fr', [Validators.required, Validators.email]),
       password: new FormControl('9ar9ouch', [Validators.required])
     });
+    console.log(this.form);
   }
 
   submit(): void{

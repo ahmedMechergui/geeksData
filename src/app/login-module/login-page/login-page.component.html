@@ -32,7 +32,7 @@
 
 
             <div class="row mb-3 px-sm-3">
-              <button type="submit" class="btn btn-blue text-center">
+              <button type="submit" class="btn btn-blue text-center" [title]="form.invalid ? 'veuillez saisir des informations valides':''"  [disabled]="form.invalid || form.errors">
                 <app-loader *ngIf="isLoading" radius="18"></app-loader> Connecter
 
               </button>

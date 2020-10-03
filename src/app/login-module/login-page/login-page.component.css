@@ -15,6 +15,10 @@ body {
   margin: 0px 40px
 }
 
+button[disabled]{
+  cursor: not-allowed;
+}
+
 .logo {
   width: 150px;
   height: 150px;
